@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cf_user_submissions</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+	<div class = "container">
+		<div class="input-group mb-3">
+			<input type="text" id = "user_handle" class="form-control" placeholder="Codeforces Handle" aria-label="Codeforces Handle" aria-describedby="basic-addon2">
+			<div class="input-group-append">
+				<button class="btn btn-outline-primary" type="button" onclick="getUserData()">Search</button>
+			</div>
+		</div>
+     	<div class="btn-group" role="group" aria-label="Basic example">
+		  <button type="button" class="btn btn-outline-primary" onclick="settype()">All problems</button>
+		  <button type="button" class="btn btn-outline-primary" onclick="settype('onlyPractice')">Practice</button>
+		  <button type="button" class="btn btn-outline-primary" onclick="settype('onlyContest')">Contest</button>
+		</div>
+		<div class = "date-inputs">
+			<input type="date" id = "start-date" class="form-control" aria-describedby="basic-addon2">
+			<p>&nbsp;-&nbsp;</p>
+			<input type="date" id = "end-date" class="form-control" aria-describedby="basic-addon2">
+			<button class="btn btn-outline-primary" style="margin-left: 5px" type="button" onclick="applyDate()">Apply</button>
+			<button class="btn btn-outline-primary" style="margin-left: 5px" type="button" onclick="resetDate()">Reset</button>
+		</div>
+
+		<canvas id = "submissionGraph"></canvas>
+		<h5 id = "total_solved">total solved</h5>
+	</div>
+</body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js" integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw==" crossorigin="anonymous"></script>
+
+	<script src = "script.js"></script>
+</html>

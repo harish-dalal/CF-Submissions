@@ -1,0 +1,26 @@
+
+body, html{
+	height: 80vh;
+	margin: 10px; 
+}
+
+.container{
+	/*max-height: 40vh;*/
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
+	flex-direction: column;
+}
+
+.date-inputs{
+	align-self: center;
+	display: flex;
+	margin-top: 20px;
+	width: 70%;
+
+
+}
+
+#submissionGraph{
+	/*height: 90vh;*/
+}
